@@ -73,10 +73,10 @@ isin_filter
 d=population[isin_filter].index
 d
 population2=population.drop (d, axis=0)
-print(population2.shape)  # N=26,880
+print(population2.shape)  # N=25,880
 population2.masstf.value_counts()  
 population2.head()
-# 0: no transfusion (N=23,538), 1: massive transfusion (N=585), 0.5: transfusion but not massive (grey zone, N=1,972)
+# 0: no transfusion (N=23,334), 1: massive transfusion (N=582), 0.5: transfusion but not massive (grey zone, N=1,964)
 
 duplication=population2.duplicated(['fileid'], keep=False) # Is there duplicated case?
 len(population2[duplication]) # N=2 
